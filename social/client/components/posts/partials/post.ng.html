@@ -1,0 +1,88 @@
+
+<div class="t-view" data-tv-type="text">
+    
+    <div class="tv-header media">
+        
+        <a href="" class="tvh-user pull-left">
+            <div class="lv-avatar bgm-red" style="margin-left:20px;margin-top:6px;">{{ ::post.author().profile.name[0] }}</div>
+        </a>
+
+        <div class="media-body p-t-5">
+            <strong class="d-block">{{ ::post.author().profile.name }}</strong>
+            <small class="c-gray">
+                <span am-time-ago="post.publishedAt"></span>
+            </small>
+        </div>
+        
+        <ul class="actions m-t-20 hidden-xs"
+            data-ng-if="post.authorId == baseCtrl.userId">
+
+            <li ng-show="vm.isUpdating(post)">
+                <button class="btn btn-default"
+                        data-ng-click="vm.cancelUpdate(post)">
+                            Cancelar
+                </button>
+                <button class="btn btn-primary"
+                        data-ng-click="vm.update(post)">
+                            Salvar
+                </button>
+            </li>
+
+            <li class="dropdown" ng-hide="vm.isUpdating(post)">
+                <a href="" data-toggle="dropdown">
+                    <i class="zmdi zmdi-more-vert"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-right">
+                    <li data-ng-click="vm.startUpdate(post)">
+                        <a href="javascript:void(0);">Editar</a>
+                    </li>
+                    <li data-ng-click="vm.remove(post)">
+                        <a href="javascript:void(0);">Remover</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="tv-body">
+        <pre ng-hide="vm.isUpdating(post)" style="background-color:inherit;border:none;font-size:inherit;font-family:inherit;font-weight:inherit;color:inherit;">{{ post.content }}</pre>
+
+        <div ng-show="vm.isUpdating(post)" id="area-{{ $index }}">
+            <textarea class="wp-text auto-size"
+                      style="border: 1px solid #2196F3;padding:20px;"
+                      data-auto-size="true"
+                      data-ng-model="vm.updateData.content">
+            </textarea>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <ul class="tvb-stats">
+            <li class="tvbs-comments">0 Comentários</li>
+        </ul>
+        <a class="tvc-more hidden" href="">
+            <i class="zmdi zmdi-mode-comment"></i> Ver todos os comentários
+        </a>
+    </div>
+
+    <div class="tv-comments">
+        <ul class="tvc-lists">
+            <li class="media">
+                <a href="" class="tvh-user pull-left">
+                    <div class="lv-avatar bgm-red" style="margin-left:30px;margin-top:10px;">a</div>
+                </a>
+                <div class="media-body">
+                    <strong class="d-block">David Peiterson</strong>
+                    <small class="c-gray">April 23, 2014 at 05:10</small>
+                    <div class="m-t-10">Maecenas fermentum tellus ex, ac aliquet nisl malesuada id.</div>
+                </div>
+            </li>
+
+            <li class="p-20">
+                <div class="fg-line">
+                    <textarea class="form-control auto-size" placeholder="Escreva um comentário..."></textarea>
+                </div>              
+                <button class="m-t-15 btn btn-primary btn-sm">Comentar</button>
+            </li>
+        </ul>
+    </div>
+</div>

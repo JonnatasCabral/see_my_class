@@ -1,0 +1,100 @@
+
+@import 'variables.less';
+
+html, body {
+    height: 100% !important;
+}
+
+.content-bg {
+    background-color: @secondary;
+}
+
+.fill { 
+    min-height: 100% !important;
+    height: 100% !important;
+}
+
+#messages-main {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    display: block;
+}
+
+
+.login-navigation {     
+
+    & > li {
+        min-width: 36px;
+        min-height: 36px;
+
+        &:not(:hover) {
+            font-size: 0px;
+            border-radius: 100%;
+        }
+
+        &:hover {
+            border-radius: 10px;
+            padding: 10px 20px;
+            font-size: 20px;
+        }
+
+    }
+}
+
+
+.ms-item {
+    min-width:200px !important;
+}
+
+.ms-item.ms-item-customer {
+    background-color: #2196F3 !important;
+}
+
+.green-bg {
+    background-color: #748B83 !important;
+    color: white !important;
+}
+
+
+body {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+// MESSAGES
+
+#messages-main {
+
+    background-color: @secondary;
+
+    .ms-menu {
+        background: @primary;
+        border-right: 1px solid @primary;
+    }
+
+    #ms-compose {
+        display:none;
+    }
+}
+
+#ms-menu-trigger {
+    .line-wrap .line {
+        background-color: #717171;
+    }
+}
+
+.ms-reply {
+    box-shadow: none;
+    padding-left: 0px;
+
+    button {
+
+        background: @secondary;
+        // color: @m-blue;
+        
+        &:hover {
+            background: #f2f2f2;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+
+<div class="container"
+     data-ng-include="'client/components/posts/partials/form.ng.html'">
+</div>
+
+<div class="container">
+    <div class="block-header">
+        <h2>Postagens</h2>
+    </div>
+
+    <!-- Recent Posts -->
+    <div class="card c-timeline">
+        <div class="timeline">
+            <span data-ng-repeat="post in vm.posts"
+                  data-ng-include="'client/components/posts/partials/post.ng.html'">
+            </span>
+        </div>
+        <div class="clearfix"></div>
+        <div class="load-more">
+            <a href="" data-ng-click="vm.loadMore()"><i class="zmdi zmdi-refresh-alt"></i> Carregar mais...</a>
+        </div>
+        <br/>
+        <br/>
+    </div>
+</div>
