@@ -2145,6 +2145,11 @@ body.login-content:before {
   background-position: center;
 }
 
+.img-que-tal {
+    border: 0;
+    width: 700px;
+}
+
 .wall-img-preview .wip-item > img {
   display: none;
 }
