@@ -26,11 +26,11 @@
       .state('auth', {
         abstract: true,
         template: '<span ui-view></span>',
-        onEnter: function(){
+        onEnter: () => {
           var body = angular.element('body');
           body.addClass('login-content');
         },
-        onExit: function(){
+        onExit: () => {
           var body = angular.element('body');
           body.removeClass('login-content');
         }
@@ -53,15 +53,14 @@
       })
   }
 
-  function publicationsRoutes ($stateProvider) {
+  function publicationsRoutes ($stateProvider, $auth) {
     $stateProvider
-
       .state('posts', {
         abstract: true,
         templateUrl: 'client/components/base.ng.html',
         resolve: {
-          'currentUser': function ($meteor) {
-            return $meteor.requireUser();
+          'currentUser': ($auth) => {
+            return $auth.requireUser();
           }
         }
       })

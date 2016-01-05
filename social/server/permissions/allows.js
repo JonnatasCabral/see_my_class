@@ -15,3 +15,19 @@ Posts.allow({
   }
 
 });
+
+
+Images.allow({
+    insert: function (userId) {
+      return (userId ? true : false);
+    },
+    remove: function (userId) {
+      return (userId ? true : false);
+    },
+    download: function (userId) {
+      return (userId ? true : false);
+    },
+    update: function (userId) {
+      return (userId ? true : false);
+    }
+  });

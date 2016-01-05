@@ -3,8 +3,9 @@
  * @class collections.Posts
  * @instancename post
  * @param {String}    authorId          "ForeignKey" to Users instance
- * @param {Datetime}  publishedAt     Date that was published
+ * @param {Datetime}  publishedAt        Date that was published
  * @param {Datetime}  content            The content of post
+ * @param {Datetime}  image              The image of post
  */
 Posts = new Mongo.Collection('Posts');
 
@@ -17,6 +18,13 @@ Posts.helpers({
       _id: this.authorId
     });
   },
+
+  imageUrl: function () {
+    var image = Images.findOne({_id: this.image});
+    if (image) {
+      return image.url();
+    }
+  }
 
 });
 

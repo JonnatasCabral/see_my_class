@@ -1,5 +1,5 @@
 
-<div class="t-view" data-tv-type="text">
+<div class="t-view" data-tv-type="{{ post.type }}">
     
     <div class="tv-header media">
         
@@ -52,6 +52,11 @@
                       data-auto-size="true"
                       data-ng-model="vm.updateData.content">
             </textarea>
+            <br/>
+        </div>
+
+        <div class="wall-img-preview lightbox clearfix" data-ng-if="post.image">
+          <img class="wip-item" data-ng-src="{{ ::post.imageUrl() }}" style="padding:0;" />
         </div>
 
         <div class="clearfix"></div>

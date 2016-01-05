@@ -38,3 +38,7 @@ jaywon:meteor-node-uuid
 superstringsoft:observatory
 matb33:collection-hooks
 planettraining:oclazyload
+danialfarid:ng-file-upload
+alexk111:ng-img-crop
+cfs:gridfs
+angular-meteor-auth

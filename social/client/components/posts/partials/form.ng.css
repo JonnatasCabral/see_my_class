@@ -1,0 +1,74 @@
+
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+.drop-box.dragover-err {
+  border: 5px dashed red;
+}
+ 
+.uploaded-image {
+  max-height: 50px;
+  max-width: 100px;
+}
+
+.ng-crop-container {
+  height: 500px;
+}
+
+.t-view[data-tv-type="bad"]:before {
+  padding-top: 10px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e126" !important;
+  background: #F44336 !important;
+  box-shadow: 0 0 0 1px #F44336 !important;
+}
+
+.t-view[data-tv-type="bad"]:after {
+  background: #F44336 !important;
+}
+
+.t-view[data-tv-type="average"]:before {
+  padding-top: 10px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e086" !important;
+  background: #FF9800 !important;
+  box-shadow: 0 0 0 1px #FF9800 !important;
+}
+
+.t-view[data-tv-type="average"]:after {
+  background: #FF9800 !important;
+}
+
+.t-view[data-tv-type="good"]:before {
+  padding-top: 10px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e125" !important;
+  background: #4CAF50 !important;
+  box-shadow: 0 0 0 1px #4caf50 !important;
+}
+
+.t-view[data-tv-type="good"]:after {
+  background: #4CAF50 !important;
+}
