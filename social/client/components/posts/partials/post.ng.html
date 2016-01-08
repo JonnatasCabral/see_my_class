@@ -62,32 +62,12 @@
         <div class="clearfix"></div>
 
         <ul class="tvb-stats">
-            <li class="tvbs-comments">0 Comentários</li>
+            <li class="tvbs-comments">{{ post.commentsQtd() }} Comentários</li>
         </ul>
         <a class="tvc-more hidden" href="">
             <i class="zmdi zmdi-mode-comment"></i> Ver todos os comentários
         </a>
     </div>
 
-    <div class="tv-comments">
-        <ul class="tvc-lists">
-            <li class="media">
-                <a href="" class="tvh-user pull-left">
-                    <div class="lv-avatar bgm-red" style="margin-left:30px;margin-top:10px;">a</div>
-                </a>
-                <div class="media-body">
-                    <strong class="d-block">David Peiterson</strong>
-                    <small class="c-gray">April 23, 2014 at 05:10</small>
-                    <div class="m-t-10">Maecenas fermentum tellus ex, ac aliquet nisl malesuada id.</div>
-                </div>
-            </li>
-
-            <li class="p-20">
-                <div class="fg-line">
-                    <textarea class="form-control auto-size" placeholder="Escreva um comentário..."></textarea>
-                </div>              
-                <button class="m-t-15 btn btn-primary btn-sm">Comentar</button>
-            </li>
-        </ul>
-    </div>
+    <div class="tv-comments" data-ng-include="'client/components/posts/partials/comments.ng.html'"></div>
 </div>

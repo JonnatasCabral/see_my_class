@@ -24,7 +24,15 @@ Posts.helpers({
     if (image) {
       return image.url();
     }
-  }
+  },
+
+  comments: function () {
+    return Comments.find({postId: this._id});
+  },
+
+  commentsQtd: function () {
+    return this.comments().count();
+  },
 
 });
 
@@ -32,5 +40,6 @@ Posts.helpers({
 Posts.before.insert(function (userId, post) {
   post.authorId = userId;
   post.publishedAt = new Date();
+  post.state = Meteor.users.findOne({_id: userId}).profile.state;
   return post;
 });

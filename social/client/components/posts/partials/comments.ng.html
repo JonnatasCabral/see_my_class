@@ -1,0 +1,33 @@
+<ul class="tvc-lists" data-ng-controller="CommentsCtrl as commentCtrl" data-ng-init="commentCtrl.post = post">
+
+    <li class="media" data-ng-repeat="comment in commentCtrl.comments">
+        <a href="" class="tvh-user pull-left">
+            <div class="lv-avatar bgm-red" style="margin-left:30px;margin-top:10px;">
+                {{ ::comment.author().profile.name[0] }}
+            </div>
+        </a>
+        <div class="media-body">
+            <strong class="d-block">{{ ::comment.author().profile.name }}</strong>
+            <small class="c-gray">
+                <span am-time-ago="comment.publishedAt"></span>
+            </small>
+            <div class="m-t-10">{{ comment.content }}</div>
+        </div>
+    </li>
+
+    <li class="p-20">
+
+        <form data-ng-submit="commentCtrl.submit()">
+            <div class="fg-line">
+                <textarea class="form-control auto-size"
+                          data-ng-model="commentCtrl.formData.content"
+                          placeholder="Escreva um comentário...">
+                </textarea>
+            </div>              
+            <button type="submit"
+                    class="m-t-15 btn btn-primary btn-sm">
+                    Comentar
+            </button>
+        </form>
+    </li>
+</ul>

@@ -37,6 +37,7 @@
     this.subscribe('posts', () => {
       return [this.getReactively('postsQuantity')];
     });
+    this.subscribe('comments');
     this.subscribe('images');
     this.subscribe('users');
 
